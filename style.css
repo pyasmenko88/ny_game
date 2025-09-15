@@ -14,8 +14,54 @@
 
 body {
   font-family: 'VelaSans', sans-serif;
-  text-align: center;
-  padding-top: 50px;
+  background-color: #e0e0e0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100vw;
+  height: calc(100vw * 9 / 16);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #app {
+    width: calc(100vh * 16 / 9);
+    height: 100vh;
+  }
+}
+
+#menu,
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  position: relative;
+}
+
+#backButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 button {
