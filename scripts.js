@@ -1,7 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('colorButton');
-  button.addEventListener('click', () => {
-    const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = color;
+  const menu = document.getElementById('menu');
+  const game = document.getElementById('game');
+  const playButton = document.getElementById('playButton');
+  const backButton = document.getElementById('backButton');
+
+  playButton.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    game.classList.remove('hidden');
+  });
+
+  backButton.addEventListener('click', () => {
+    game.classList.add('hidden');
+    menu.classList.remove('hidden');
   });
 });
